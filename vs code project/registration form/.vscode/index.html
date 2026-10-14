@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Registration Form</h1>
+        <p class="subtitle">Please fill in the details below</p>
+
+        <form>
+
+            <!-- Personal Details -->
+            <h2>Personal Details</h2>
+
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname"
+                       placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="studentid">Student ID</label>
+                <input type="text" id="studentid" name="studentid"
+                       placeholder="Enter your student ID">
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="text" id="dob" name="dob"
+                       placeholder="dd-mm-yyyy">
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender" value="male" checked>
+                        Male
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender" value="other">
+                        Other
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email address">
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile"
+                       placeholder="Enter your mobile number">
+            </div>
+
+            <div class="form-group">
+                <label for="mother">Mother's Name</label>
+                <input type="text" id="mother" name="mother"
+                       placeholder="Enter mother's name">
+            </div>
+
+            <div class="form-group">
+                <label for="father">Father's Name</label>
+                <input type="text" id="father" name="father"
+                       placeholder="Enter father's name">
+            </div>
+
+            <div class="form-group">
+                <label for="portfolio">Personal Portfolio</label>
+                <input type="url" id="portfolio" name="portfolio"
+                       placeholder="https://">
+            </div>
+
+
+            <!-- Academic Details -->
+            <h2>Academic Details</h2>
+
+            <div class="form-group">
+                <label for="course">Course</label>
+
+                <select id="course" name="course">
+                    <option value="bca" selected>BCA</option>
+                    <option value="mca">MCA</option>
+                    <option value="bba">BBA</option>
+                    <option value="bsc">B.Sc</option>
+                    <option value="bcom">B.Com</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department</label>
+
+                <input type="text" id="department" name="department"
+                       placeholder="Enter your department">
+            </div>
+
+            <div class="form-group">
+                <label for="year">Year / Semester</label>
+
+                <input type="text" id="year" name="year"
+                       placeholder="Example: 2nd Year / 3rd Semester">
+            </div>
+
+            <div class="form-group">
+                <label for="roll">Roll Number</label>
+
+                <input type="text" id="roll" name="roll"
+                       placeholder="Enter your roll number">
+            </div>
+
+            <div class="form-group">
+                <label for="admission">Admission Year</label>
+
+                <input type="text" id="admission" name="admission"
+                       placeholder="Example: 2025">
+            </div>
+
+
+            <!-- Account Details -->
+            <h2>Account Details</h2>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+
+                <input type="text" id="username" name="username"
+                       placeholder="Create a username">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+
+                <input type="password" id="password" name="password"
+                       placeholder="Create a password">
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+
+                <input type="password" id="confirm-password"
+                       name="confirm-password"
+                       placeholder="Confirm your password">
+            </div>
+
+
+            <!-- Additional Information -->
+            <h2>Additional Information</h2>
+
+            <div class="form-group">
+                <label for="hobbies">Hobbies</label>
+
+                <input type="text" id="hobbies" name="hobbies"
+                       placeholder="Reading, Music">
+            </div>
+
+            <div class="form-group">
+                <label for="skills">Skills</label>
+
+                <input type="text" id="skills" name="skills"
+                       placeholder="HTML, CSS">
+            </div>
+
+            <div class="form-group">
+                <label for="photo">Passport-size Photo</label>
+
+                <input type="file" id="photo" name="photo"
+                       accept="image/*">
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="button-group">
+                <button type="submit" class="submit-btn">
+                    Register
+                </button>
+
+                <button type="reset" class="reset-btn">
+                    Reset
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

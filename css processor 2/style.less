@@ -1,0 +1,288 @@
+@import "variables.less";
+
+/* 1. VARIABLES */
+@text-color: #1f2937;
+@card-background: #ffffff;
+@page-background: #f3f4f6;
+
+/* 3. MIXIN */
+.flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 4. PARAMETRIC MIXIN */
+.button-style(@bg, @text: white) {
+    background-color: @bg;
+    color: @text;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* 9. NAMESPACE */
+#utilities {
+    .rounded() {
+        border-radius: 12px;
+    }
+
+    .shadow() {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* 8. EXTEND BASE CLASS */
+.message {
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+/* 10. GUARDED MIXINS */
+.guard-color(@color) when (@color = red) {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.guard-color(@color) when (@color = green) {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+/* 2. NESTING */
+.navbar {
+    background-color: #111827;
+    color: white;
+    padding: 20px 5%;
+
+    .flex-center();
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        margin-left: 15px;
+
+        &:hover {
+            color: #93c5fd;
+        }
+    }
+}
+
+/* GENERAL PAGE STYLES */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: @font-size;
+    color: @text-color;
+    background-color: @page-background;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: @spacing;
+}
+.hero {
+    background: @primary-color;
+    color: white;
+    padding: 35px;
+    margin-bottom: 25px;
+
+    #utilities.rounded();
+    #utilities.shadow();
+
+    h2 {
+        font-size: 30px;
+        margin-top: 0;
+    }
+}
+
+button {
+    font-size: 14px;
+    margin: 5px 5px 5px 0;
+}
+
+.primary-btn {
+    .button-style(@primary-color);
+}
+
+.danger-btn {
+    .button-style(@danger-color);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: @spacing;
+}
+
+/* 1. VARIABLES */
+.card {
+    background-color: @card-background;
+    padding: @spacing;
+    border: 1px solid #e5e7eb;
+
+    #utilities.rounded();
+    #utilities.shadow();
+
+    h2 {
+        font-size: 19px;
+        color: @primary-color;
+        margin-top: 0;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    a {
+        color: @primary-color;
+
+        &:hover {
+            color: @danger-color;
+        }
+    }
+}
+
+/* 3. MIXINS */
+.center-box {
+    .flex-center();
+    background-color: #dbeafe;
+    min-height: 80px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* 5. OPERATIONS */
+@base-size: 100px;
+
+.calculation-box {
+    width: @base-size * 2;
+    max-width: 100%;
+    padding: 20px - 5px;
+    background-color: #fef3c7;
+    border: 1px solid #f59e0b;
+    text-align: center;
+}
+
+/* 6. FUNCTIONS */
+.light-color {
+    background-color: lighten(@primary-color, 35%);
+    color: @text-color;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+.dark-color {
+    background-color: darken(@primary-color, 15%);
+    color: white;
+    padding: 10px;
+}
+/* 7. IMPORT */
+.import-box {
+    background-color: @success-color;
+    color: white;
+    padding: 12px;
+}
+
+/* 8. EXTEND */
+.success-message:extend(.message) {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.error-message:extend(.message) {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* 9. NAMESPACE */
+.namespace-box {
+    #utilities.rounded();
+    #utilities.shadow();
+    background-color: #ede9fe;
+    padding: 15px;
+}
+
+/* 10. GUARDS */
+.guard-red {
+    .guard-color(red);
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+.guard-green {
+    .guard-color(green);
+    padding: 10px;
+}
+
+/* 11. SCOPE */
+@scope-color: blue;
+
+.scope-box {
+    @scope-color: red;
+    color: @scope-color;
+    font-weight: bold;
+}
+
+.global-box {
+    color: @scope-color;
+    font-weight: bold;
+}
+
+/* 12. ESCAPING */
+.escape-box {
+    width: ~"calc(100% - 20px)";
+    background-color: #e0f2fe;
+    padding: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111827;
+    color: white;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 800px) {
+    .features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        margin-left: 0;
+        margin-right: 12px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+}

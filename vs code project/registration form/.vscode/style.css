@@ -1,0 +1,70 @@
+/* ---------- Bootstrap theme customisation ---------- */
+:root {
+    --brand: #4f46e5;
+    --brand-dark: #3730a3;
+    --bs-primary: var(--brand);
+    --bs-primary-rgb: 79, 70, 229;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+}
+
+/* Custom colour utilities */
+.bg-brand {
+    background-color: var(--brand) !important;
+}
+
+.text-bg-primary {
+    background-color: var(--brand) !important;
+}
+
+/* Card */
+.form-card {
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Section headings */
+.section-title {
+    color: var(--brand);
+    border-bottom: 2px solid var(--brand);
+    padding-bottom: 8px;
+    margin-top: 28px;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+/* Labels */
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Focus effect */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--brand);
+    box-shadow: 0 0 4px rgba(79, 70, 229, 0.3);
+}
+
+/* Brand button */
+.btn-brand {
+    background-color: var(--brand);
+    color: #fff;
+    border: none;
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+    background-color: var(--brand-dark);
+    color: #fff;
+}
+
+/* Photo preview */
+.photo-preview {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+}

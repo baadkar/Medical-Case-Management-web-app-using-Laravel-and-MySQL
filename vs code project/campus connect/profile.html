@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | Campus Connect</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="dashboard-page">
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-brand">
+        🎓 Campus Connect
+    </div>
+
+
+    <div class="student-mini-profile">
+
+        <div class="profile-circle">
+            AS
+        </div>
+
+        <div>
+
+            <strong>Alex Student</strong>
+
+            <small>
+                MCA • 2nd Year
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <a href="dashboard.html">
+            <i class="bi bi-grid"></i>
+            Dashboard
+        </a>
+
+        <a href="dashboard.html#announcements">
+            <i class="bi bi-megaphone"></i>
+            Announcements
+        </a>
+
+        <a href="dashboard.html#notes">
+            <i class="bi bi-journal-text"></i>
+            Study Materials
+        </a>
+
+        <a href="dashboard.html#events">
+            <i class="bi bi-calendar-event"></i>
+            Events
+        </a>
+
+        <a href="dashboard.html#clubs">
+            <i class="bi bi-people"></i>
+            Clubs
+        </a>
+
+        <a href="dashboard.html#lostFound">
+            <i class="bi bi-search"></i>
+            Lost & Found
+        </a>
+
+        <a href="dashboard.html#opportunities">
+            <i class="bi bi-briefcase"></i>
+            Opportunities
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a href="profile.html" class="active">
+            <i class="bi bi-person"></i>
+            Profile & Settings
+        </a>
+
+        <a href="index.html">
+            <i class="bi bi-box-arrow-left"></i>
+            Logout
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- MAIN -->
+
+<main class="main-content">
+
+
+<header class="topbar">
+
+    <a href="dashboard.html"
+       class="btn btn-light">
+
+        <i class="bi bi-arrow-left"></i>
+        Dashboard
+
+    </a>
+
+    <h5 class="mb-0">
+        Profile & Settings
+    </h5>
+
+</header>
+
+
+<div class="container-fluid p-4">
+
+
+<!-- PROFILE HEADER -->
+
+<div class="profile-header-card">
+
+    <div class="profile-large">
+        AS
+    </div>
+
+    <div class="flex-grow-1">
+
+        <h3 class="fw-bold">
+            Alex Student
+        </h3>
+
+        <p class="text-secondary mb-1">
+            MCA • Computer Science
+        </p>
+
+        <small>
+            Student ID: MCA2026001
+        </small>
+
+    </div>
+
+    <button class="btn btn-primary">
+        <i class="bi bi-pencil"></i>
+        Edit Profile
+    </button>
+
+</div>
+
+
+<div class="row g-4 mt-2">
+
+
+<!-- PERSONAL DETAILS -->
+
+<div class="col-lg-8">
+
+    <section class="dashboard-card">
+
+        <div class="card-heading">
+
+            <div>
+
+                <h5>
+                    Personal Information
+                </h5>
+
+                <p>
+                    Manage your student profile.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form id="profileForm">
+
+            <div class="row g-3">
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        Full Name
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           value="Alex Student">
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        Student ID
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           value="MCA2026001"
+                           disabled>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        College Email
+                    </label>
+
+                    <input type="email"
+                           class="form-control"
+                           value="alex@college.edu">
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        Mobile Number
+                    </label>
+
+                    <input type="tel"
+                           class="form-control"
+                           value="+91 9876543210">
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        Course
+                    </label>
+
+                    <select class="form-select">
+
+                        <option selected>
+                            MCA
+                        </option>
+
+                        <option>
+                            BCA
+                        </option>
+
+                        <option>
+                            B.Tech
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        Department
+                    </label>
+
+                    <select class="form-select">
+
+                        <option selected>
+                            Computer Science
+                        </option>
+
+                        <option>
+                            Information Technology
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        Year
+                    </label>
+
+                    <select class="form-select">
+
+                        <option>
+                            1st Year
+                        </option>
+
+                        <option selected>
+                            2nd Year
+                        </option>
+
+                        <option>
+                            3rd Year
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        Division
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           value="A">
+
+                </div>
+
+
+                <div class="col-12">
+
+                    <label class="form-label">
+                        Profile Picture
+                    </label>
+
+                    <input type="file"
+                           class="form-control"
+                           accept="image/*">
+
+                </div>
+
+
+                <div class="col-12">
+
+                    <label class="form-label">
+                        About Me
+                    </label>
+
+                    <textarea class="form-control"
+                              rows="4"
+                              placeholder="Tell something about yourself...">MCA student interested in web development, Python and AI.</textarea>
+
+                </div>
+
+            </div>
+
+
+            <button type="submit"
+                    class="btn btn-primary mt-4">
+
+                Save Changes
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- SECURITY -->
+
+    <section class="dashboard-card mt-4">
+
+        <div class="card-heading">
+
+            <div>
+
+                <h5>
+                    <i class="bi bi-shield-lock text-primary"></i>
+                    Security
+                </h5>
+
+                <p>
+                    Keep your account secure.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="settings-row">
+
+            <div>
+
+                <strong>
+                    Change Password
+                </strong>
+
+                <p>
+                    Update your password regularly.
+                </p>
+
+            </div>
+
+            <button class="btn btn-outline-primary">
+                Change
+            </button>
+
+        </div>
+
+
+        <div class="settings-row">
+
+            <div>
+
+                <strong>
+                    Login Sessions
+                </strong>
+
+                <p>
+                    Manage devices where you are logged in.
+                </p>
+
+            </div>
+
+            <button class="btn btn-outline-secondary">
+                Manage
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- SETTINGS -->
+
+<div class="col-lg-4">
+
+
+<!-- NOTIFICATION SETTINGS -->
+
+<section class="dashboard-card">
+
+    <h5>
+        <i class="bi bi-bell text-primary"></i>
+        Notifications
+    </h5>
+
+    <p class="text-secondary">
+        Choose which notifications you receive.
+    </p>
+
+
+    <div class="setting-toggle">
+
+        <div>
+            <strong>Announcements</strong>
+        </div>
+
+        <div class="form-check form-switch">
+
+            <input class="form-check-input"
+                   type="checkbox"
+                   checked>
+
+        </div>
+
+    </div>
+
+
+    <div class="setting-toggle">
+
+        <div>
+            <strong>Event Reminders</strong>
+        </div>
+
+        <div class="form-check form-switch">
+
+            <input class="form-check-input"
+                   type="checkbox"
+                   checked>
+
+        </div>
+
+    </div>
+
+
+    <div class="setting-toggle">
+
+        <div>
+            <strong>Internships</strong>
+        </div>
+
+        <div class="form-check form-switch">
+
+            <input class="form-check-input"
+                   type="checkbox"
+                   checked>
+
+        </div>
+
+    </div>
+
+
+    <div class="setting-toggle">
+
+        <div>
+            <strong>Study Groups</strong>
+        </div>
+
+        <div class="form-check form-switch">
+
+            <input class="form-check-input"
+                   type="checkbox">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRIVACY -->
+
+<section class="dashboard-card mt-4">
+
+    <h5>
+        <i class="bi bi-lock text-primary"></i>
+        Privacy
+    </h5>
+
+    <p class="text-secondary">
+        Control who can see your information.
+    </p>
+
+
+    <div class="setting-toggle">
+
+        <div>
+            <strong>Show Email</strong>
+        </div>
+
+        <div class="form-check form-switch">
+
+            <input class="form-check-input"
+                   type="checkbox">
+
+        </div>
+
+    </div>
+
+
+    <div class="setting-toggle">
+
+        <div>
+            <strong>Show Mobile Number</strong>
+        </div>
+
+        <div class="form-check form-switch">
+
+            <input class="form-check-input"
+                   type="checkbox">
+
+        </div>
+
+    </div>
+
+
+    <div class="setting-toggle">
+
+        <div>
+            <strong>Allow Messages</strong>
+        </div>
+
+        <div class="form-check form-switch">
+
+            <input class="form-check-input"
+                   type="checkbox"
+                   checked>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DANGER ZONE -->
+
+<section class="dashboard-card mt-4 border-danger">
+
+    <h5 class="text-danger">
+        Account
+    </h5>
+
+    <p class="text-secondary">
+        Manage your account.
+    </p>
+
+    <button class="btn btn-outline-danger w-100">
+        Deactivate Account
+    </button>
+
+</section>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+
+<script src="javascript.js"></script>
+
+</body>
+</html>

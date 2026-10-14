@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Campus Connect</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="dashboard-page">
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-brand">
+        🎓 Campus Connect
+    </div>
+
+
+    <div class="student-mini-profile">
+
+        <div class="profile-circle">
+            AS
+        </div>
+
+        <div>
+
+            <strong>Alex Student</strong>
+
+            <small>
+                MCA • 2nd Year
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <a href="#" class="active">
+            <i class="bi bi-grid"></i>
+            Dashboard
+        </a>
+
+        <a href="#announcements">
+            <i class="bi bi-megaphone"></i>
+            Announcements
+        </a>
+
+        <a href="#notes">
+            <i class="bi bi-journal-text"></i>
+            Study Materials
+        </a>
+
+        <a href="#events">
+            <i class="bi bi-calendar-event"></i>
+            Events
+        </a>
+
+        <a href="#clubs">
+            <i class="bi bi-people"></i>
+            Clubs
+        </a>
+
+        <a href="#studyGroups">
+            <i class="bi bi-person-workspace"></i>
+            Study Groups
+        </a>
+
+        <a href="#lostFound">
+            <i class="bi bi-search"></i>
+            Lost & Found
+        </a>
+
+        <a href="#opportunities">
+            <i class="bi bi-briefcase"></i>
+            Jobs & Internships
+        </a>
+
+        <a href="#campus">
+            <i class="bi bi-building"></i>
+            Campus Information
+        </a>
+
+        <a href="#help">
+            <i class="bi bi-life-preserver"></i>
+            Help Me
+        </a>
+
+        <a href="#saved">
+            <i class="bi bi-bookmark"></i>
+            Saved Items
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a href="profile.html">
+            <i class="bi bi-person"></i>
+            Profile & Settings
+        </a>
+
+        <a href="index.html" onclick="logoutUser()">
+            <i class="bi bi-box-arrow-left"></i>
+            Logout
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- MAIN -->
+
+<main class="main-content">
+
+
+<!-- TOPBAR -->
+
+<header class="topbar">
+
+    <button class="btn d-lg-none"
+            onclick="toggleSidebar()">
+
+        <i class="bi bi-list fs-3"></i>
+
+    </button>
+
+
+    <div class="search-box">
+
+        <i class="bi bi-search"></i>
+
+        <input type="text"
+               id="globalSearch"
+               placeholder="Search Campus Connect...">
+
+    </div>
+
+
+    <div class="topbar-actions">
+
+        <button class="icon-btn"
+                title="Notifications">
+
+            <i class="bi bi-bell"></i>
+
+            <span class="notification-dot"></span>
+
+        </button>
+
+
+        <a href="profile.html"
+           class="profile-top">
+
+            <div class="profile-circle small">
+                AS
+            </div>
+
+            <span>Alex</span>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- DASHBOARD CONTENT -->
+
+<div class="container-fluid p-4">
+
+
+<!-- WELCOME -->
+
+<div class="welcome-banner">
+
+    <div>
+
+        <p class="mb-1">
+            Tuesday, 26 September 2026
+        </p>
+
+        <h2 class="fw-bold">
+            Good Evening, Alex 👋
+        </h2>
+
+        <p class="mb-0">
+            Here's what's happening around your campus today.
+        </p>
+
+    </div>
+
+    <i class="bi bi-mortarboard-fill"></i>
+
+</div>
+
+
+<!-- STATISTICS -->
+
+<div class="row g-3 mt-3">
+
+    <div class="col-6 col-xl-3">
+
+        <div class="stat-card">
+
+            <div class="stat-icon blue">
+                <i class="bi bi-megaphone"></i>
+            </div>
+
+            <div>
+                <small>Announcements</small>
+                <h3>05</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-6 col-xl-3">
+
+        <div class="stat-card">
+
+            <div class="stat-icon green">
+                <i class="bi bi-calendar-event"></i>
+            </div>
+
+            <div>
+                <small>Upcoming Events</small>
+                <h3>03</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-6 col-xl-3">
+
+        <div class="stat-card">
+
+            <div class="stat-icon orange">
+                <i class="bi bi-journal-text"></i>
+            </div>
+
+            <div>
+                <small>New Materials</small>
+                <h3>12</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-6 col-xl-3">
+
+        <div class="stat-card">
+
+            <div class="stat-icon purple">
+                <i class="bi bi-briefcase"></i>
+            </div>
+
+            <div>
+                <small>Opportunities</small>
+                <h3>08</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- QUICK ACTIONS -->
+
+<div class="section-heading mt-5">
+
+    <div>
+        <h4>Quick Actions</h4>
+        <p>Common things you may want to do.</p>
+    </div>
+
+</div>
+
+
+<div class="row g-3">
+
+    <div class="col-6 col-md-3">
+
+        <button class="quick-action">
+            <i class="bi bi-upload"></i>
+            <span>Upload Notes</span>
+        </button>
+
+    </div>
+
+
+    <div class="col-6 col-md-3">
+
+        <button class="quick-action">
+            <i class="bi bi-search"></i>
+            <span>Report Lost Item</span>
+        </button>
+
+    </div>
+
+
+    <div class="col-6 col-md-3">
+
+        <button class="quick-action">
+            <i class="bi bi-people"></i>
+            <span>Create Study Group</span>
+        </button>
+
+    </div>
+
+
+    <div class="col-6 col-md-3">
+
+        <button class="quick-action help-action"
+                onclick="requestHelp()">
+
+            <i class="bi bi-life-preserver"></i>
+            <span>Help Me</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- MAIN GRID -->
+
+<div class="row g-4 mt-3">
+
+
+<!-- LEFT -->
+
+<div class="col-xl-8">
+
+
+<!-- ANNOUNCEMENTS -->
+
+<section id="announcements"
+         class="dashboard-card mb-4">
+
+    <div class="card-heading">
+
+        <div>
+
+            <h5>
+                <i class="bi bi-megaphone text-primary"></i>
+                Latest Announcements
+            </h5>
+
+            <p>
+                Important updates from your college.
+            </p>
+
+        </div>
+
+        <a href="#">
+            View All
+        </a>
+
+    </div>
+
+
+    <div class="announcement-item">
+
+        <div class="announcement-icon">
+            <i class="bi bi-exclamation-circle"></i>
+        </div>
+
+        <div class="flex-grow-1">
+
+            <div class="d-flex justify-content-between">
+
+                <h6>
+                    Semester Examination Schedule Released
+                </h6>
+
+                <span class="badge bg-danger-subtle text-danger">
+                    Important
+                </span>
+
+            </div>
+
+            <p>
+                The examination timetable for Semester III has been published.
+            </p>
+
+            <small>
+                Academic Department • 2 hours ago
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <div class="announcement-item">
+
+        <div class="announcement-icon">
+            <i class="bi bi-calendar"></i>
+        </div>
+
+        <div>
+
+            <h6>
+                College Holiday Notice
+            </h6>
+
+            <p>
+                College will remain closed on the upcoming public holiday.
+            </p>
+
+            <small>
+                Administration • Yesterday
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EVENTS -->
+
+<section id="events"
+         class="dashboard-card mb-4">
+
+    <div class="card-heading">
+
+        <div>
+
+            <h5>
+                <i class="bi bi-calendar-event text-success"></i>
+                Upcoming Events
+            </h5>
+
+            <p>
+                Events happening around campus.
+            </p>
+
+        </div>
+
+        <a href="#">
+            View All
+        </a>
+
+    </div>
+
+
+    <div class="row g-3">
+
+
+        <div class="col-md-6">
+
+            <div class="event-card">
+
+                <div class="event-date">
+
+                    <strong>28</strong>
+                    <span>SEP</span>
+
+                </div>
+
+                <div>
+
+                    <span class="badge bg-primary-subtle text-primary">
+                        Workshop
+                    </span>
+
+                    <h6 class="mt-2">
+                        AI & Future Technology
+                    </h6>
+
+                    <small>
+                        <i class="bi bi-clock"></i>
+                        10:00 AM
+                    </small>
+
+                    <br>
+
+                    <small>
+                        <i class="bi bi-geo-alt"></i>
+                        Seminar Hall
+                    </small>
+
+                    <button class="btn btn-sm btn-primary mt-3">
+                        Register
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-6">
+
+            <div class="event-card">
+
+                <div class="event-date">
+
+                    <strong>02</strong>
+                    <span>OCT</span>
+
+                </div>
+
+                <div>
+
+                    <span class="badge bg-success-subtle text-success">
+                        Competition
+                    </span>
+
+                    <h6 class="mt-2">
+                        Campus Hackathon
+                    </h6>
+
+                    <small>
+                        <i class="bi bi-clock"></i>
+                        9:00 AM
+                    </small>
+
+                    <br>
+
+                    <small>
+                        <i class="bi bi-geo-alt"></i>
+                        Computer Lab
+                    </small>
+
+                    <button class="btn btn-sm btn-success mt-3">
+                        Register
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STUDY MATERIAL -->
+
+<section id="notes"
+         class="dashboard-card mb-4">
+
+    <div class="card-heading">
+
+        <div>
+
+            <h5>
+                <i class="bi bi-journal-text text-warning"></i>
+                Recent Study Materials
+            </h5>
+
+            <p>
+                Notes and resources for your studies.
+            </p>
+
+        </div>
+
+        <a href="#">
+            View All
+        </a>
+
+    </div>
+
+
+    <div class="table-responsive">
+
+        <table class="table align-middle">
+
+            <thead>
+
+                <tr>
+                    <th>Material</th>
+                    <th>Subject</th>
+                    <th>Uploaded By</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>
+                        <i class="bi bi-file-earmark-pdf text-danger"></i>
+                        Data Structures Notes
+                    </td>
+
+                    <td>DS</td>
+
+                    <td>Prof. Sharma</td>
+
+                    <td>
+                        <button class="btn btn-sm btn-outline-primary">
+                            Download
+                        </button>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <i class="bi bi-file-earmark-pdf text-danger"></i>
+                        Database Management
+                    </td>
+
+                    <td>DBMS</td>
+
+                    <td>Rahul</td>
+
+                    <td>
+                        <button class="btn btn-sm btn-outline-primary">
+                            Download
+                        </button>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- LOST FOUND -->
+
+<section id="lostFound"
+         class="dashboard-card mb-4">
+
+    <div class="card-heading">
+
+        <div>
+
+            <h5>
+                <i class="bi bi-search text-info"></i>
+                Lost & Found
+            </h5>
+
+            <p>
+                Help students recover their belongings.
+            </p>
+
+        </div>
+
+        <button class="btn btn-sm btn-primary">
+            + Report Item
+        </button>
+
+    </div>
+
+
+    <div class="lost-item">
+
+        <div class="lost-icon">
+            <i class="bi bi-person-badge"></i>
+        </div>
+
+        <div class="flex-grow-1">
+
+            <h6>
+                Lost College ID Card
+            </h6>
+
+            <p>
+                Blue college ID card lost near Computer Lab.
+            </p>
+
+            <small>
+                📍 Computer Lab • 14 Aug
+            </small>
+
+        </div>
+
+        <span class="badge bg-danger-subtle text-danger">
+            Lost
+        </span>
+
+    </div>
+
+
+    <div class="lost-item">
+
+        <div class="lost-icon">
+            <i class="bi bi-backpack"></i>
+        </div>
+
+        <div class="flex-grow-1">
+
+            <h6>
+                Found Black Backpack
+            </h6>
+
+            <p>
+                Backpack found near the library entrance.
+            </p>
+
+            <small>
+                📍 Library • Today
+            </small>
+
+        </div>
+
+        <span class="badge bg-success-subtle text-success">
+            Found
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- OPPORTUNITIES -->
+
+<section id="opportunities"
+         class="dashboard-card mb-4">
+
+    <div class="card-heading">
+
+        <div>
+
+            <h5>
+                <i class="bi bi-briefcase text-purple"></i>
+                Internship & Job Opportunities
+            </h5>
+
+            <p>
+                Verified opportunities for students.
+            </p>
+
+        </div>
+
+        <a href="#">
+            View All
+        </a>
+
+    </div>
+
+
+    <div class="opportunity-item">
+
+        <div class="company-icon">
+            T
+        </div>
+
+        <div class="flex-grow-1">
+
+            <h6>
+                Web Development Intern
+            </h6>
+
+            <p>
+                Tech Solutions • Remote
+            </p>
+
+            <small>
+                Skills: HTML, CSS, JavaScript
+            </small>
+
+        </div>
+
+        <div class="text-end">
+
+            <span class="badge bg-success">
+                Verified
+            </span>
+
+            <br>
+
+            <button class="btn btn-sm btn-outline-primary mt-2">
+                View
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STUDY GROUP -->
+
+<section id="studyGroups"
+         class="dashboard-card">
+
+    <div class="card-heading">
+
+        <div>
+
+            <h5>
+                <i class="bi bi-people text-primary"></i>
+                Study Groups
+            </h5>
+
+            <p>
+                Learn together with your classmates.
+            </p>
+
+        </div>
+
+        <button class="btn btn-sm btn-primary">
+            Create Group
+        </button>
+
+    </div>
+
+
+    <div class="row g-3">
+
+        <div class="col-md-6">
+
+            <div class="group-card">
+
+                <span class="badge bg-primary-subtle text-primary">
+                    Data Structures
+                </span>
+
+                <h6 class="mt-2">
+                    DSA Preparation Group
+                </h6>
+
+                <p>
+                    Practice coding problems together.
+                </p>
+
+                <small>
+                    👥 6 / 10 members
+                </small>
+
+                <br>
+
+                <button class="btn btn-sm btn-outline-primary mt-3">
+                    Join Group
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-6">
+
+            <div class="group-card">
+
+                <span class="badge bg-warning-subtle text-warning">
+                    DBMS
+                </span>
+
+                <h6 class="mt-2">
+                    Database Study Group
+                </h6>
+
+                <p>
+                    Prepare for upcoming examinations.
+                </p>
+
+                <small>
+                    👥 8 / 10 members
+                </small>
+
+                <br>
+
+                <button class="btn btn-sm btn-outline-primary mt-3">
+                    Join Group
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="col-xl-4">
+
+
+<!-- NOTIFICATIONS -->
+
+<section class="dashboard-card mb-4">
+
+    <div class="card-heading">
+
+        <h5>
+            <i class="bi bi-bell text-primary"></i>
+            Notifications
+        </h5>
+
+        <span class="badge bg-primary">
+            4 New
+        </span>
+
+    </div>
+
+
+    <div class="notification-item">
+
+        <i class="bi bi-calendar-check text-success"></i>
+
+        <div>
+
+            <strong>Event Reminder</strong>
+
+            <p>
+                Hackathon starts tomorrow.
+            </p>
+
+            <small>
+                10 minutes ago
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <div class="notification-item">
+
+        <i class="bi bi-file-earmark text-warning"></i>
+
+        <div>
+
+            <strong>New Study Material</strong>
+
+            <p>
+                New DBMS notes uploaded.
+            </p>
+
+            <small>
+                1 hour ago
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <div class="notification-item">
+
+        <i class="bi bi-search text-info"></i>
+
+        <div>
+
+            <strong>Lost & Found</strong>
+
+            <p>
+                A similar ID card was reported.
+            </p>
+
+            <small>
+                2 hours ago
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CLUBS -->
+
+<section id="clubs"
+         class="dashboard-card mb-4">
+
+    <div class="card-heading">
+
+        <h5>
+            <i class="bi bi-people text-danger"></i>
+            Popular Clubs
+        </h5>
+
+        <a href="#">
+            View All
+        </a>
+
+    </div>
+
+
+    <div class="club-item">
+
+        <div class="club-icon">
+            💻
+        </div>
+
+        <div class="flex-grow-1">
+
+            <h6>
+                Coding Club
+            </h6>
+
+            <small>
+                128 Members
+            </small>
+
+        </div>
+
+        <button class="btn btn-sm btn-outline-primary">
+            Join
+        </button>
+
+    </div>
+
+
+    <div class="club-item">
+
+        <div class="club-icon">
+            📷
+        </div>
+
+        <div class="flex-grow-1">
+
+            <h6>
+                Photography Club
+            </h6>
+
+            <small>
+                76 Members
+            </small>
+
+        </div>
+
+        <button class="btn btn-sm btn-outline-primary">
+            Join
+        </button>
+
+    </div>
+
+
+    <div class="club-item">
+
+        <div class="club-icon">
+            🎵
+        </div>
+
+        <div class="flex-grow-1">
+
+            <h6>
+                Music Club
+            </h6>
+
+            <small>
+                95 Members
+            </small>
+
+        </div>
+
+        <button class="btn btn-sm btn-outline-primary">
+            Join
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- CAMPUS -->
+
+<section id="campus"
+         class="dashboard-card mb-4">
+
+    <div class="card-heading">
+
+        <h5>
+            <i class="bi bi-building text-primary"></i>
+            Campus Information
+        </h5>
+
+    </div>
+
+
+    <div class="campus-links">
+
+        <a href="#">
+            <i class="bi bi-book"></i>
+            Library
+        </a>
+
+        <a href="#">
+            <i class="bi bi-person-workspace"></i>
+            Faculty Directory
+        </a>
+
+        <a href="#">
+            <i class="bi bi-telephone"></i>
+            Important Contacts
+        </a>
+
+        <a href="#">
+            <i class="bi bi-map"></i>
+            Campus Map
+        </a>
+
+        <a href="#">
+            <i class="bi bi-clock"></i>
+            Office Timings
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- HELP ME -->
+
+<section id="help"
+         class="help-card">
+
+    <i class="bi bi-life-preserver"></i>
+
+    <h5>
+        Need Help?
+    </h5>
+
+    <p>
+        Request assistance from authorized college staff.
+    </p>
+
+    <button class="btn btn-light"
+            onclick="requestHelp()">
+
+        <i class="bi bi-shield-check"></i>
+        Help Me
+
+    </button>
+
+    <small class="d-block mt-2">
+        Your location will only be shared with permission.
+    </small>
+
+</section>
+
+
+<!-- SAVED -->
+
+<section id="saved"
+         class="dashboard-card mt-4">
+
+    <div class="card-heading">
+
+        <h5>
+            <i class="bi bi-bookmark text-warning"></i>
+            Saved Items
+        </h5>
+
+    </div>
+
+    <p class="text-secondary">
+        Your saved notes, events, internships and announcements
+        will appear here.
+    </p>
+
+</section>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+
+<script src="javascript.js"></script>
+
+</body>
+</html>

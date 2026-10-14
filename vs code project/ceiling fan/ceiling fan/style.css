@@ -1,0 +1,107 @@
+/* Page Styling */
+
+body{
+    margin:0;
+    padding:40px;
+    background:#f2f2f2;
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-start;
+}
+
+h1{
+    position:absolute;
+    top:10px;
+    width:100%;
+    text-align:center;
+}
+
+.fan-box{
+    text-align:center;
+    margin-top:80px;
+}
+
+/* Rod */
+
+.rod{
+    width:8px;
+    height:100px;
+    background:black;
+    margin:auto;
+}
+
+/* Fan */
+
+.fan{
+    width:220px;
+    height:220px;
+    margin:auto;
+    position:relative;
+    transform-origin:center;
+}
+
+/* Center Circle */
+
+.center{
+    width:30px;
+    height:30px;
+    background:black;
+    border-radius:50%;
+    position:absolute;
+    top:95px;
+    left:95px;
+}
+
+/* Blades */
+
+.blade{
+    width:20px;
+    height:90px;
+    background:#555;
+    border-radius:20px;
+    position:absolute;
+    left:100px;
+    top:10px;
+    transform-origin:bottom center;
+}
+
+/* Three Blades */
+
+.blade1{
+    transform:rotate(0deg);
+}
+
+.blade2{
+    transform:rotate(120deg);
+}
+
+.blade3{
+    transform:rotate(240deg);
+}
+
+/* Animation */
+
+@keyframes rotateFan{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* Fan Speeds */
+
+.slow{
+    animation:rotateFan 6s linear infinite;
+}
+
+.medium{
+    animation:rotateFan 4s linear infinite;
+}
+
+.fast{
+    animation:rotateFan 1s linear infinite;
+}

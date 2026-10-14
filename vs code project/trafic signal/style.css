@@ -1,0 +1,74 @@
+/* Body Styling */
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightblue;
+}
+
+/* Traffic Signal Box */
+.signal{
+    width: 120px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Common Style for All Lights */
+.light{
+    width: 80px;
+    height: 80px;
+    margin: 15px auto;
+    border-radius: 50%;
+    background-color: gray;   /* OFF Color */
+}
+
+/* Red Light Animation */
+.red{
+    animation: redLight 9s infinite;
+}
+
+/* Yellow Light Animation */
+.yellow{
+    animation: yellowLight 9s infinite;
+}
+
+/* Green Light Animation */
+.green{
+    animation: greenLight 9s infinite;
+}
+
+/* Red ON */
+@keyframes redLight{
+    0%,33%{
+        background-color: red;
+    }
+    34%,100%{
+        background-color: gray;
+    }
+}
+
+/* Yellow ON */
+@keyframes yellowLight{
+    0%,33%{
+        background-color: gray;
+    }
+    34%,66%{
+        background-color: yellow;
+    }
+    67%,100%{
+        background-color: gray;
+    }
+}
+
+/* Green ON */
+@keyframes greenLight{
+    0%,66%{
+        background-color: gray;
+    }
+    67%,100%{
+        background-color: limegreen;
+    }
+}

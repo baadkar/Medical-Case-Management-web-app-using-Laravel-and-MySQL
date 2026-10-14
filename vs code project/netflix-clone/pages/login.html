@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix</title>
+  <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" />
+  <link rel="stylesheet" href="../css/auth.css" />
+</head>
+<body>
+  <div class="auth-bg"></div>
+  <header class="auth-header">
+    <a href="../index.html">
+      <svg viewBox="0 0 111 30" height="45" width="167"><path fill="#e50914" d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680852,-5.68434189e-14 L99.5313525,-5.68434189e-14 L105.06233,14.2806261 Z M90.6916439,0 L81.7438124,0 L81.7438124,26.2354545 L84.906281,26.2354545 L84.906281,13.2635199 L90.6916439,26.2354545 L93.9057081,26.2354545 L93.9057081,0 L90.6916439,0 Z M71.5718505,0 L66.357322,0 L66.357322,24.9418583 L71.5718505,24.9418583 C76.7863789,24.9418583 80.0733443,21.4984483 80.0733443,12.4709291 C80.0733443,3.44340996 76.7863789,0 71.5718505,0 Z M71.5718505,21.9058661 L69.519778,21.9058661 L69.519778,3.036 L71.5718505,3.036 C74.8212611,3.036 76.910996,5.60664734 76.910996,12.4709291 C76.910996,19.3352109 74.8212611,21.9058661 71.5718505,21.9058661 Z M53.2724616,0 L48.058,0 L48.058,26.2354545 L53.2724616,26.2354545 C58.48699,26.2354545 61.7739554,22.7920445 61.7739554,13.7645253 C61.7739554,4.73700613 58.48699,0 53.2724616,0 Z M53.2724616,23.1998623 L51.2203891,23.1998623 L51.2203891,3.036 L53.2724616,3.036 C56.5218722,3.036 58.6116071,5.60664734 58.6116071,13.7645253 C58.6116071,21.9224033 56.5218722,23.1998623 53.2724616,23.1998623 Z M41.634776,0 L36.4202475,0 L36.4202475,26.2354545 L41.634776,26.2354545 C46.8493044,26.2354545 50.1362698,22.7920445 50.1362698,13.7645253 C50.1362698,4.73700613 46.8493044,0 41.634776,0 Z M41.634776,23.1998623 L39.5827035,23.1998623 L39.5827035,3.036 L41.634776,3.036 C44.8841866,3.036 46.9739215,5.60664734 46.9739215,13.7645253 C46.9739215,21.9224033 44.8841866,23.1998623 41.634776,23.1998623 Z M28.139632,0 L23.999999,0 L23.999999,26.2354545 L28.139632,26.2354545 L28.139632,0 Z M16.999999,0 L0,0 L0,3.036 L5.999999,3.036 L5.999999,26.2354545 L10.999999,26.2354545 L10.999999,3.036 L16.999999,3.036 L16.999999,0 Z"/></svg>
+    </a>
+  </header>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <h1>Sign In</h1>
+      <form id="loginForm">
+        <div class="input-group">
+          <input type="text" id="email" placeholder=" " required />
+          <label for="email">Email or mobile number</label>
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" placeholder=" " required />
+          <label for="password">Password</label>
+        </div>
+        <button type="submit" class="btn-submit">Sign In</button>
+        <div class="form-help">
+          <label><input type="checkbox" checked /> Remember me</label>
+          <a href="#">Need help?</a>
+        </div>
+      </form>
+      <div class="auth-footer">
+        <p>New to Netflix? <a href="../index.html">Sign up now</a>.</p>
+        <p class="recaptcha">This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more.</a></p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Simulate login → go to profiles
+      window.location.href = 'profiles.html';
+    });
+  </script>
+</body>
+</html>
